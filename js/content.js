@@ -1,5 +1,7 @@
 function handleMessage(request, sender, callback) {
     if (request.action == 'fill_dept') {
+
+        $('#edit-issue').click();
         // callback(document);
         var e = $.Event("keypress");
         e.which = 44;

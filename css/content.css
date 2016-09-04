@@ -3,8 +3,8 @@ body, html {
 }
 
 html {
-    width: 500px;
-    min-height: 400px;
+    width: 400px;
+    min-height: 300px;
 }
 
 .infoLines span {
@@ -19,16 +19,6 @@ html {
     content: ":"
 }
 
-.actionButton {
-    float: left;
-    margin-right: 20px;
-}
-
-.actionButton:last-of-type {
-    float: right;
-    margin-right: 0;
-}
-
 body {
     display: flex;
     min-height: 100vh;
@@ -39,9 +29,11 @@ body {
 main {
     flex: 1 0 auto;
 }
+.mainMessage h4 {font-size: 20px;}
 
-.footer-copyright, .page-footer {
+.footer-copyright, footer.page-footer {
     background-color: #006064 !important;
+    padding-top: 0px;
 }
 
 .mainMessage {
@@ -59,6 +51,7 @@ main {
 
 .results {
     text-align: center;
+    margin-top: 80px;
 }
 
 .infoLines {
