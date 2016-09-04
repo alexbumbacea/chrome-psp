@@ -8,9 +8,7 @@ const simulateAjaxTimer = 1000;
  * @param params - array
  */
 var sleep = function (time, params) {
-    return new Promise((resolve) = > setTimeout(resolve, time, params)
-    )
-    ;
+    return new Promise((resolve) => setTimeout(resolve, time, params));
 };
 
 /**
@@ -67,21 +65,15 @@ var createResultsLines = function (results) {
 
         // show each line after a predefined time for a better user experience
         var timer = counter++ * timerStep;
-        sleep(timer, {"lineKey": key, "counter": counter, "limit": Object.keys(results).length}).then((params) = > {
-            $(".infoLines .line.res_"+params.lineKey
-    ).
-        fadeIn('slow');
-        // finally, show the actionButtons container
-        if (params.counter == params.limit) {
-            sleep(params.counter * timerStep).then(() = > {
-                $(".actionButtons"
-        ).
-            fadeIn('slow');
-        })
-            ;
-        }
-    })
-        ;
+        sleep(timer, {"lineKey": key, "counter": counter, "limit": Object.keys(results).length}).then((params) => {
+            $(".infoLines .line.res_" + params.lineKey).fadeIn('slow');
+            // finally, show the actionButtons container
+            if (params.counter == params.limit) {
+                sleep(params.counter * timerStep).then(() => {
+                    $(".actionButtons").fadeIn('slow');
+                });
+            }
+        });
     }
 };
 
