@@ -1,0 +1,72 @@
+body, html {
+    overflow: hidden;
+}
+
+html {
+    width: 500px;
+    min-height: 400px;
+}
+
+.infoLines span {
+    font-size: 16px;
+}
+
+.infoLines .field {
+    margin-right: 10px;
+}
+
+.infoLines .field::after {
+    content: ":"
+}
+
+.actionButton {
+    float: left;
+    margin-right: 20px;
+}
+
+.actionButton:last-of-type {
+    float: right;
+    margin-right: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer-copyright, .page-footer {
+    background-color: #006064 !important;
+}
+
+.mainMessage {
+    text-align: center;
+    margin-top: 0;
+    background-color: #006064;
+    color: #eeeeee;
+}
+
+.resultMessage {
+    margin-top: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    padding: 20px;
+}
+
+.results {
+    text-align: center;
+}
+
+.infoLines {
+    width: 75% !important;
+    margin: 0 auto !important;
+}
+
+.infoLines > p {
+    font-size: 20px;
+    vertical-align: middle;
+}

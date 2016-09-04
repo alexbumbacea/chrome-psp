@@ -1,0 +1,250 @@
+
+.hidden {
+    display: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.loader {
+    position: relative;
+    margin: 0 auto;
+    width: 50px;
+}
+
+.loader:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.circular {
+    animation: rotate 2s linear infinite;
+    height: 100%;
+    transform-origin: center center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-linecap: round;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+    }
+}
+
+@keyframes color {
+    100%,
+    0% {
+        stroke: #d62d20;
+    }
+    40% {
+        stroke: #0057e7;
+    }
+    66% {
+        stroke: #008744;
+    }
+    80%,
+    90% {
+        stroke: #ffa700;
+    }
+}
+
+/*** Start Vanilla CSS 1.0.2 */
+body {
+    font: 9pt/1.5em sans-serif;
+}
+
+pre, code, tt {
+    font: 1em/1.5em ‘Andale Mono’, ’Lucida Console’, monospace;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+    font-weight: bold;
+}
+
+em, i, dfn {
+    font-style: italic;
+}
+
+dfn {
+    font-weight: bold;
+}
+
+p, code, pre, kbd {
+    margin: 0 0 1.5em 0;
+}
+
+blockquote {
+    margin: 0 1.5em 1.5em 1.5em;
+}
+
+cite {
+    font-style: italic;
+}
+
+li ul, li ol {
+    margin: 0 1.5em;
+}
+
+ul, ol {
+    margin: 0 1.5em 1.5em 1.5em;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ol ol {
+    list-style: upper-alpha;
+}
+
+ol ol ol {
+    list-style: lower-roman;
+}
+
+ol ol ol ol {
+    list-style: lower-alpha;
+}
+
+dl {
+    margin: 0 0 1.5em 0;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 1.5em;
+}
+
+table {
+    margin-bottom: 1.4em;
+    width: 100%;
+}
+
+th {
+    font-weight: bold;
+}
+
+th, td, caption {
+    padding: 4px 10px 4px 5px;
+}
+
+tfoot {
+    font-style: italic;
+}
+
+sup, sub {
+    line-height: 0;
+}
+
+abbr, acronym {
+    border-bottom: 1px dotted;
+}
+
+address {
+    margin: 0 0 1.5em;
+    font-style: italic;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+pre {
+    margin: 1.5em 0;
+    white-space: pre;
+}
+
+img.centered, .aligncenter, div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.alignright {
+    display: inline;
+}
+
+img.alignleft {
+    display: inline;
+}
+
+.alignright {
+    float: right;
+    margin-left: 10px;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+* + html .clearfix {
+    display: inline-block;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+* html .group {
+    height: 1%;
+}
+
+* + html .group {
+    display: inline-block;
+}
+
+.group:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}

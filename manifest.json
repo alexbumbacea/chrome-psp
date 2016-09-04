@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.1",
+  "version_name": "eMAG Hackathon 2016",
+  "author": "Team Supporters (#14)",
+  "name": "JIRA Support",
+  "short_name": "JIRA Support",
+  "description": "JIRA Support - A Chrome-based browsers extension for JIRA - support tasks, using machine-learning algorithms.",
+  "icons": {
+    "16": "icons/extension-icon16.png",
+    "48": "icons/extension-icon48.png",
+    "128": "icons/extension-icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/extension-icon16.png",
+      "48": "icons/extension-icon48.png",
+      "128": "icons/extension-icon128.png"
+    },
+    "default_title": "JIRA Support",
+    "default_popup": "templates/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://jira/*"
+      ],
+      "js": [
+        "js/vendors/jquery-3.1.0.min.js",
+        "js/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "js/vendors/jquery-3.1.0.min.js"
+    ]
+  },
+  "permissions": [
+    "activeTab",
+    "http://*/"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
